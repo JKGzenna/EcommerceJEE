@@ -50,7 +50,7 @@
                                                                     codigo=listaSub.get(isub).getCodigo();
                                                                     %>
                                                                     <!-- no incluimos el href ni el controlador para que no nos liste las subcategorias -->
-                                                                    <li><a"<%--= codigo --%>"> <%= listaSub.get(isub).getNombre() %> </a></li>
+                                                                    <li><a<%= codigo %>><%= listaSub.get(isub).getNombre() %></a></li>
                                                                     <% } %>
                                                                 </ul>
                                                             </div>

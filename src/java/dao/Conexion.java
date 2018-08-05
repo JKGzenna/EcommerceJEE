@@ -14,7 +14,7 @@ public class Conexion {
     public static Connection conectar(){
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            return DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce_bd", "root", "1234");
+            return DriverManager.getConnection("jdbc:mysql://localhost:3306/ecommerce_bbdd", "root", "1234");
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {

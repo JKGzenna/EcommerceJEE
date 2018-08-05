@@ -331,6 +331,14 @@ BEGIN
 END$$
 
 
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarTodasSubCategorias`
+()
+BEGIN
+    SELECT codigo,nombre FROM tbl_subcategoria
+    WHERE visible=true;
+END$$
+
+
 -- NOMBRE EN EL DAO -- listarTodoDeCategorias -- COMENTADO EN  EL DAO --
 -- LO COMENTO PORQUE SE USA PARA LISTAR TODAS LAS CATEGORIAS Y SUBCATEGORIAS MEZCLADA 
 -- A LA HORA DE REGISTRAR UN PRODUCTO Y PREFIERO SEPARARLO EN CATEGORIAS Y SUBCATEGORIAS
@@ -435,7 +443,7 @@ END$$
 
 
 -- ESTE ES EL PL sp_listarPorCategoria QUE EN EL DAO SE LLAMABA listarProductosPorCategoria Y QUE SE BIFURCA EN 
--- sp_listarPorCategoriaSuperior Y sp_listarPorSubCategoria ESCRITOS A CONTINUACIÓN
+-- sp_listarPorCategoriaSuperior Y sp_listarPorSubCategoria ESCRITOS A CONTINUACIï¿½N
 -- CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_listarPorCategoria` (`p_moneda` CHAR(3), `cat` INT)  
 -- begin
 --     if p_moneda<>'EUR' then
