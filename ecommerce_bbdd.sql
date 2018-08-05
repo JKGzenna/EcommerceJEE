@@ -383,8 +383,7 @@ BEGIN
     DELETE FROM tbl_subcategoria 
           WHERE nombre=(m_nombre) 
             AND visible=(m_visible) 
-            AND categoria_superior=(m_categoria_superior)
-    ;
+            AND categoria_superior=(m_categoria_superior);
 END$$ 
 
 
@@ -398,8 +397,7 @@ CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_registrarproducto`
              `p_visible` BOOLEAN, `p_codigo_marca` INT, `p_codigo_categoriasuperior` INT, 
 			 `p_codigo_subcategoria` INT, `p_img` VARCHAR(100), 
              `p_moneda_lib` CHAR(3), `p_precio_lib` DECIMAL(10,2), `p_precionuevo_lib` DECIMAL(10,2), 
-             `p_moneda_usd` CHAR(3), `p_precio_usd` DECIMAL(10,2), `p_precionuevo_usd` DECIMAL(10,2)
-            )  
+             `p_moneda_usd` CHAR(3), `p_precio_usd` DECIMAL(10,2), `p_precionuevo_usd` DECIMAL(10,2))  
 BEGIN
     DECLARE v_webid INT;
     INSERT INTO tbl_producto VALUES(null,p_nombre,p_precio,p_precionuevo,p_stock,p_nuevo,p_recomendado,
